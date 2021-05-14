@@ -182,8 +182,16 @@ for rect in rects:
     # The syntax of resize function in OpenCV is
     # cv2.resize(src, dsize[, dst[, fx[, fy[, interpolation]]]])
     # https://www.tutorialkart.com/opencv/python/opencv-python-resize-image/
-
+    # cv2 resize interpolation methods
+    # INTER_NEAREST – a nearest-neighbor interpolation
+    # INTER_LINEAR – a bilinear interpolation (used by default)
+    # INTER_AREA – resampling using pixel area relation. It may be a preferred method for image decimation, as it gives moire’-free results. But when the image is zoomed, it is similar to theINTER_NEAREST method.
+    # INTER_CUBIC – a bicubic interpolation over 4×4 pixel neighborhood
+    # INTER_LANCZOS4 – a Lanczos interpolation over 8×8 pixel neighborhood
+    # https://chadrick-kwag.net/cv2-resize-interpolation-methods/
     roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA) #มีนัยสำคัญต่อการวิเคราะห์
+
+
     # print(roi)
 
     # Morphological Operations
