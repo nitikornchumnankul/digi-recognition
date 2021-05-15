@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 from skimage.feature import hog
 import os
-
+import PIL as pil
 #Get the path of the training set
 # Argparse Tutorial¶ https://docs.python.org/3/howto/argparse.html
 # create file a.py is like 'ls' that is for show on recent directory
@@ -174,9 +174,20 @@ for rect in rects:
 
     # Make the rectangular region around the digit
     leng = int(rect[3] * 1.6)
+    print("Leng: "+ str(leng))
+
     pt1 = int(rect[1] + rect[3] // 2 - leng // 2)
+    print("Pt1: " + str(pt1))
+
     pt2 = int(rect[0] + rect[2] // 2 - leng // 2)
+    print("Pt2: " + str(pt2))
+
     roi = im_th[pt1:pt1+leng, pt2:pt2+leng]
+    print("Roi: "+ str(roi))
+
+
+
+
     # Resize the image
     #OpenCV Resize image using cv2.resize()
     # The syntax of resize function in OpenCV is
@@ -190,7 +201,9 @@ for rect in rects:
     # INTER_LANCZOS4 – a Lanczos interpolation over 8×8 pixel neighborhood
     # https://chadrick-kwag.net/cv2-resize-interpolation-methods/
     roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA) #มีนัยสำคัญต่อการวิเคราะห์
-
+    # cv2.namedWindow("Interpolation cv2.INTER_AREA" + str(roi))
+    # cv2.imshow("Interpolation cv2.INTER_AREA" + str(roi))
+    # cv2.waitKey()
 
     # print(roi)
 
