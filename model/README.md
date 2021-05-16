@@ -11,7 +11,7 @@ This repository contains the following files-
 
 1. `generateClassifier.py` - Python Script to create the classifier file `digits_cls.pkl`.
 2. `performRecognition.py` - Python Script to test the classifier.
-3. `digits_cls.pkl` - Classifier file for digit recognition.
+3. `digits_cls.pkl` - [Classifier file for digit recognition](https://www.researchgate.net/figure/The-learning-process-of-a-classifier-The-classifier-learns-from-the-training-data-The_fig1_333505093).
 4. `photo_1.jpg` - Test image number 1 to test the classifier
 5. `photo_2.jpg` - Test image numbre 2 to test the classifier
 
