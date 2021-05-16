@@ -1,6 +1,6 @@
 # Digit Recognition
 ## [DATASETS](https://www.openml.org/d/554)
-
+## [ORIGINAL DATA](http://yann.lecun.com/exdb/mnist/)
 # Dependencies
 1. `cv2`
 2. `sklearn`
